@@ -1,5 +1,5 @@
 function getBlockedIPs() {
-    return fetch('https://somebodyscript.github.io/WebUnion/')
+    return fetch('https://webunion.onrender.com')
       .then(response => response.text())
       .then(html => {
         const parser = new DOMParser();
@@ -25,7 +25,7 @@ function getBlockedIPs() {
           document.body.innerHTML = '<div class="blocked-page"><h1>Your IP is globally blocked on all WebUnion-using sites, if this is an error, please contact us on our <a href="https://discord.gg/vuD7PN8kR6">Discord server</a></h1></div>';
           applyBlockedPageStyles();
         } else {
-          fetch('https://somebodyscript.github.io/WebUnion/')
+          fetch('https://webunion.onrender.com')
             .then(response => response.text())
             .then(html => {
               const parser = new DOMParser();
